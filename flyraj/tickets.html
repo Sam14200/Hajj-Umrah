@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air Tickets — Flyraj Tour & Travels Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .airline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.2rem; }
+    .airline-box { background: var(--white); border: 1px solid var(--gray-light); border-radius: 10px; padding: 1.5rem 1rem; text-align: center; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy); transition: var(--transition); cursor: default; }
+    .airline-box:hover { border-color: var(--red); color: var(--red); box-shadow: var(--shadow-sm); transform: translateY(-3px); }
+    .airline-emoji { font-size: 2rem; display: block; margin-bottom: 0.6rem; }
+    .route-table-wrap { overflow-x: auto; border-radius: 12px; box-shadow: var(--shadow-sm); }
+    .page-header { background-image: url('Images/ticket.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+    .page-header-inner { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a href="index.html" class="brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="brand-logo" /><div class="brand-text"><span class="brand-name">Flyraj Tour & Travels</span><span class="brand-tagline">A sister Concern of SSP Group</span></div></a>
+  <nav class="nav" id="mainNav">
+    <a href="umrah-hajj.html">🕋 Umrah / Hajj</a>
+    <a href="visa.html">🛂 Visa</a>
+    <a href="tickets.html" class="active">✈ Tickets</a>
+    <a href="tourist-travels.html">🌍 Tourist Travels</a>
+    <a href="about.html">🏢 About</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="divider-gold">✈</div>
+    <h1>Air Tickets</h1>
+    <p class="subtitle">Best fares on all major airlines from Dhaka — economy, business &amp; first class</p>
+  </div>
+</div>
+
+<!-- <section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title reveal">Popular Routes from Dhaka</h2>
+    <p class="section-subtitle reveal">Approximate one-way economy fares — subject to availability</p>
+    <div class="gold-rule reveal"><span>✦</span></div>
+    <div class="route-table-wrap reveal">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Airlines</th>
+            <th>Duration</th>
+            <th>Economy (from)</th>
+            <th>Business (from)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>🇧🇩 Dhaka → 🇸🇦 Jeddah</td><td>Biman, Saudia, Air Arabia</td><td>~5h 30m</td><td>BDT 35,000</td><td>BDT 90,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇦🇪 Dubai</td><td>Emirates, FlyDubai, Biman</td><td>~4h 45m</td><td>BDT 28,000</td><td>BDT 80,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇬🇧 London</td><td>Biman, Qatar, Emirates</td><td>~10h 30m</td><td>BDT 75,000</td><td>BDT 2,20,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇺🇸 New York</td><td>Qatar, Turkish, Emirates</td><td>~17h+</td><td>BDT 1,10,000</td><td>BDT 3,50,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇲🇾 Kuala Lumpur</td><td>Air Asia, Malindo, Biman</td><td>~3h 45m</td><td>BDT 18,000</td><td>BDT 55,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇸🇬 Singapore</td><td>Singapore Air, Scoot</td><td>~4h 10m</td><td>BDT 22,000</td><td>BDT 70,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇹🇷 Istanbul</td><td>Turkish Airlines, Pegasus</td><td>~8h 20m</td><td>BDT 55,000</td><td>BDT 1,60,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+          <tr><td>🇧🇩 Dhaka → 🇹🇭 Bangkok</td><td>Thai, Air Asia, Novoair</td><td>~2h 30m</td><td>BDT 16,000</td><td>BDT 48,000</td><td><a href="contact.html" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Book</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-center mt-3" style="font-size:0.82rem; color:var(--gray);">* Prices are indicative and change daily. Contact us for confirmed quotes and best fares.</p>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">Airlines We Work With</h2>
+    <div class="gold-rule reveal"><span>✦</span></div>
+    
+    <!-- Bangladeshi Airlines -->
+    <div class="reveal" style="margin-bottom: 2.5rem;">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><span>🇧🇩</span>Bangladeshi Airlines</h3>
+      <div class="airline-grid">
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Biman_Bangladesh_Airlines_Logo.svg/1200px-Biman_Bangladesh_Airlines_Logo.svg.png" alt="Biman Bangladesh Airlines" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Biman Bangladesh Airlines</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/31/US-Bangla_Airlines_logo.png/1024px-US-Bangla_Airlines_logo.png" alt="US-Bangla Airlines" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>US-Bangla Airlines</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Novoair_logo.png/1024px-Novoair_logo.png" alt="Novoair" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Novoair</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/55/Air_Astra_logo.svg/1024px-Air_Astra_logo.svg.png" alt="Air Astra" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Air Astra</div></div>
+      </div>
+    </div>
+
+    <!-- Middle East Airlines -->
+    <div class="reveal" style="margin-bottom: 2.5rem;">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><span>🕌</span>Middle East Airlines</h3>
+      <div class="airline-grid">
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png" alt="Emirates" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Emirates</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Qatar_Airways_Logo.svg/1200px-Qatar_Airways_Logo.svg.png" alt="Qatar Airways" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Qatar Airways</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Etihad_Airways_Logo.svg/1200px-Etihad_Airways_Logo.svg.png" alt="Etihad Airways" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Etihad Airways</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Flydubai_logo.svg/1200px-Flydubai_logo.svg.png" alt="Flydubai" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Flydubai</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Air_Arabia_logo.svg/1200px-Air_Arabia_logo.svg.png" alt="Air Arabia" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Air Arabia</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Saudia_Logo.svg/1200px-Saudia_Logo.svg.png" alt="Saudia" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Saudia</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Jazeera_Airways_Logo.svg/1200px-Jazeera_Airways_Logo.svg.png" alt="Jazeera Airways" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Jazeera Airways</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Kuwait_Airways_Logo.svg/1200px-Kuwait_Airways_Logo.svg.png" alt="Kuwait Airways" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Kuwait Airways</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/Oman_Air_Logo.svg/1200px-Oman_Air_Logo.svg.png" alt="Oman Air" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Oman Air</div></div>
+      </div>
+    </div>
+
+    <!-- Indian Airlines -->
+    <div class="reveal" style="margin-bottom: 2.5rem;">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><span>🇮🇳</span>Indian Airlines</h3>
+      <div class="airline-grid">
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Air_India_Logo.svg/1200px-Air_India_Logo.svg.png" alt="Air India" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Air India</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/IndiGo_Airlines_logo.svg/1200px-IndiGo_Airlines_logo.svg.png" alt="IndiGo" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>IndiGo</div></div>
+      </div>
+    </div>
+
+    <!-- Other Airlines in Asia -->
+    <div class="reveal" style="margin-bottom: 2.5rem;">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><span>🌏</span>Other Airlines in Asia</h3>
+      <div class="airline-grid">
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Singapore_Airlines_logo.svg/1200px-Singapore_Airlines_logo.svg.png" alt="Singapore Airlines" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Singapore Airlines</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Malaysia_Airlines_logo.svg/1200px-Malaysia_Airlines_logo.svg.png" alt="Malaysia Airlines" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Malaysia Airlines</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Thai_Airways_International_logo.svg/1200px-Thai_Airways_International_logo.svg.png" alt="Thai Airways" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Thai Airways</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/China_Southern_Airlines_Logo.svg/1200px-China_Southern_Airlines_Logo.svg.png" alt="China Southern Airlines" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>China Southern Airlines</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Turkish_Airlines_logo.svg/1200px-Turkish_Airlines_logo.svg.png" alt="Turkish Airlines" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Turkish Airlines</div></div>
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Cathay_Pacific_Logo.svg/1200px-Cathay_Pacific_Logo.svg.png" alt="Cathay Pacific" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>Cathay Pacific</div></div>
+      </div>
+    </div>
+
+    <!-- Other Airlines in Europe -->
+    <div class="reveal" style="margin-bottom: 2.5rem;">
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><span>🇪🇺</span>Other Airlines in Europe</h3>
+      <div class="airline-grid">
+        <div class="airline-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/British_Airways_Logo.svg/1200px-British_Airways_Logo.svg.png" alt="British Airways" style="height:3rem; object-fit:contain; margin-bottom:0.6rem;"><div>British Airways</div></div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 reveal">
+      <a href="contact.html" class="btn btn-primary">Get Best Fare Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="footer-brand-logo" /><h3>Flyraj Tour & Travels Ltd.</h3><p>Bangladesh's trusted partner for Umrah, Hajj, International Tours &amp; Visa since 2010.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="umrah-hajj.html">Umrah / Hajj</a></li><li><a href="visa.html">Visa Processing</a></li><li><a href="tickets.html">Air Tickets</a></li><li><a href="tourist-travels.html">Tourist Tours</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Flyraj Tour & Travels Ltd. All Rights Reserved.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

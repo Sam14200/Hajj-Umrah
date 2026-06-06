@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umrah & Hajj Packages — Flyraj Tour & Travels Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pkg-detail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+    .pkg-detail-card { background: var(--white); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-light); transition: var(--transition); }
+    .pkg-detail-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--red); }
+    .pkg-detail-img { width: 100%; height: 240px; object-fit: cover; }
+    .pkg-detail-body { padding: 1.8rem; }
+    .pkg-tier { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .pkg-includes { margin: 1rem 0; }
+    .pkg-includes li { font-size: 0.88rem; color: var(--gray); padding: 0.35rem 0; border-bottom: 1px dashed var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+    .pkg-includes li::before { content: '✓'; color: var(--red); font-weight: 700; }
+    .hajj-notice { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); border-radius: 14px; padding: 3rem; color: var(--white); text-align: center; margin-top: 3rem; }
+    .hajj-notice h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--gold-light); margin-bottom: 1rem; }
+    .step-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.5rem; }
+    .page-header { background-image: url('Images/umrah-hajj.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+    .page-header-inner { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a href="index.html" class="brand">
+    <img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="brand-logo" />
+    <div class="brand-text">
+      <span class="brand-name">Flyraj Tour & Travels</span>
+      <span class="brand-tagline">A sister Concern of SSP Group</span>
+    </div>
+  </a>
+  <nav class="nav" id="mainNav">
+    <a href="umrah-hajj.html" class="active">🕋 Umrah / Hajj</a>
+    <a href="visa.html">🛂 Visa</a>
+    <a href="tickets.html">✈ Tickets</a>
+    <a href="tourist-travels.html">🌍 Tourist Travels</a>
+    <a href="about.html">🏢 About</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="divider-gold">🕋</div>
+    <h1>Umrah &amp; Hajj Packages</h1>
+    <p class="subtitle">Embark on the most sacred journey of your life — guided every step of the way</p>
+  </div>
+</div>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title reveal">Umrah Packages 2026</h2>
+    <p class="section-subtitle reveal">Choose the package that fits your budget and preference</p>
+    <div class="gold-rule reveal"><span>✦</span></div>
+    <div class="pkg-detail-grid">
+      <div class="pkg-detail-card reveal">
+        <img src="Images/Economy.jpg" alt="Economy" class="pkg-detail-img" />
+        <div class="pkg-detail-body">
+          <div class="pkg-tier">
+            <span class="badge badge-navy">Economy</span>
+            <span class="badge badge-gold">13 Days</span>
+          </div>
+          <h3 class="card-title">Economy Umrah Package</h3>
+          <p class="card-desc">Transit flight.</p>
+          <ul class="pkg-includes">
+            <li>Makkah hotel (within 1000–1200 m)</li>
+            <li>Madinah hotel (outside markazia)</li>
+            <li>Everyday meal</li>
+            <li>Airport transport</li>
+            <li>Full Ziyarah Tours (Makkah-Madinah)</li>
+            <li>Umrah Visa Processing</li>
+          </ul>
+          <div class="card-price">BDT 1,27,000 <span>/ person</span></div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; margin-top:0.5rem">Book Now</a>
+        </div>
+      </div>
+      <div class="pkg-detail-card reveal">
+        <img src="Images/Primium.jpg" alt="Premium" class="pkg-detail-img" />
+        <div class="pkg-detail-body">
+          <div class="pkg-tier">
+            <span class="badge badge-red">Premium</span>
+            <span class="badge badge-gold">13 Days</span>
+          </div>
+          <h3 class="card-title">Premium Umrah Package</h3>
+          <p class="card-desc">Transit flight.</p>
+          <ul class="pkg-includes">
+            <li>Makkah hotel (within 600–700 m)</li>
+            <li>Madinah hotel (outside markazia)</li>
+            <li>Everyday meal</li>
+            <li>Airport transport</li>
+            <li>Full Ziyarah Tours (Makkah-Madinah)</li>
+            <li>Umrah Visa Processing</li>
+          </ul>
+          <div class="card-price">BDT 1,35,000 <span>/ person</span></div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; margin-top:0.5rem">Book Now</a>
+        </div>
+      </div>
+      <div class="pkg-detail-card reveal">
+        <img src="Images/Luxury.jpg" alt="VIP" class="pkg-detail-img" />
+        <div class="pkg-detail-body">
+          <div class="pkg-tier">
+            <span class="badge badge-gold" style="color:var(--navy)">VIP Luxury</span>
+            <span class="badge badge-gold">13 Days</span>
+          </div>
+          <h3 class="card-title">VIP Umrah Package</h3>
+          <p class="card-desc">Drict flight.</p>
+          <ul class="pkg-includes">
+            <li>Makkah hotel (within 300–400 m)</li>
+            <li>Madinah hotel (inside markazia- about 300 m)</li>
+            <li>Everyday meal</li>
+            <li>Airport transport</li>
+            <li>Full Ziyarah Tours (Makkah-Madinah)</li>
+            <li>Umrah Visa Processing</li>
+          </ul>
+          <div class="card-price">BDT 1,50,000 <span>/ person</span></div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; margin-top:0.5rem">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">How to Book</h2>
+    <div class="gold-rule reveal"><span>✦</span></div>
+    <div class="steps reveal">
+      <div class="step"><h3>Choose Package</h3><p>Browse our packages and select the one that best fits your needs and budget.</p></div>
+      <div class="step"><h3>Submit Documents</h3><p>Provide passport copy, photos and NID. Our team guides you through all paperwork.</p></div>
+      <div class="step"><h3>Pay & Confirm</h3><p>Pay via bKash, Nagad, bank transfer or cash. Receive your confirmation instantly.</p></div>
+      <div class="step"><h3>Travel!</h3><p>Our guide meets you at the airport. Enjoy your blessed journey stress-free.</p></div>
+    </div>
+
+    <div class="hajj-notice reveal">
+      <h3>🕋 Hajj Package 2026</h3>
+      <p style="color:rgba(255,255,255,0.75); max-width:600px; margin:0 auto 2rem; font-family:var(--font-accent); font-style:italic; font-size:1.05rem;">Hajj packages for 2025 are currently being finalized. Registration is open — limited seats available through the Bangladesh Hajj Office.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-gold">Register Interest</a>
+        <a href="contact.html" class="btn btn-outline-white">Speak to Hajj Expert</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="footer-brand-logo" /><h3>Flyraj Tour & Travels Ltd.</h3><p>Bangladesh's trusted partner for Umrah, Hajj, International Tours &amp; Visa since 2010.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="umrah-hajj.html">Umrah / Hajj</a></li><li><a href="visa.html">Visa Processing</a></li><li><a href="tickets.html">Air Tickets</a></li><li><a href="tourist-travels.html">Tourist Tours</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="footer-contact-icon">📍</div><p>House # 22(3rd Floor), Road # 19/A, Block # E, Banani<br>Dhaka-1213, Bangladesh</p></div><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Flyraj Tour & Travels Ltd. All Rights Reserved.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

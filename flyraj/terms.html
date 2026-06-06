@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions — Flyraj Tour & Travels Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* ─── Policy Layout ─── */
+    .policy-wrapper {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .policy-wrapper { grid-template-columns: 1fr; }
+      .policy-sidebar  { display: none; }
+    }
+
+    /* ─── Sidebar TOC ─── */
+    .policy-sidebar {
+      position: sticky;
+      top: 90px;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--gray-light);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .sidebar-header {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .sidebar-header h3 {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .toc-list { padding: 1rem 0; }
+
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--gray);
+      transition: all 0.2s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .toc-list a:hover,
+    .toc-list a.active {
+      color: var(--red);
+      background: rgba(192,21,42,0.04);
+      border-left-color: var(--red);
+    }
+
+    .toc-list a .toc-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: var(--gray-light);
+      border-radius: 50%;
+      font-size: 0.65rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      color: var(--navy);
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .toc-list a:hover .toc-num,
+    .toc-list a.active .toc-num {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    /* ─── Policy Content ─── */
+    .policy-content {
+      background: var(--white);
+      border-radius: 14px;
+      border: 1px solid var(--gray-light);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .policy-content-header {
+      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 40%, var(--navy-mid) 100%);
+      padding: 2.5rem 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .policy-content-header::before {
+      content: '📜';
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 5rem;
+      opacity: 0.1;
+    }
+
+    .policy-content-header .effective {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(201,168,76,0.2);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50px;
+      padding: 0.3rem 1rem;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .policy-content-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .policy-content-header p {
+      font-family: var(--font-accent);
+      font-style: italic;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      max-width: 600px;
+    }
+
+    /* ─── Policy Body ─── */
+    .policy-body { padding: 2.5rem; }
+
+    .policy-section {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--gray-light);
+      scroll-margin-top: 100px;
+    }
+
+    .policy-section:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .policy-section-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .policy-section-num {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(10,22,40,0.3);
+    }
+
+    .policy-section h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .policy-section p {
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-list { margin: 0.8rem 0 1rem; }
+
+    .policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .policy-list li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--navy);
+      border-radius: 50%;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    .policy-sub-title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy-light);
+      margin: 1.2rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .policy-sub-title::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 2px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    /* ─── Contact Box ─── */
+    .contact-policy-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-policy-box h4 {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .cpb-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .cpb-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(192,21,42,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .cpb-item p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .cpb-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+
+    /* ─── Warning box ─── */
+    .terms-warning {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(192,21,42,0.05);
+      border: 1px solid rgba(192,21,42,0.2);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .terms-warning p {
+      font-size: 0.88rem;
+      color: var(--red-dark);
+      line-height: 1.6;
+      margin: 0 !important;
+    }
+
+    /* ─── Page nav pills ─── */
+    .page-nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--gray-light);
+      flex-wrap: wrap;
+    }
+
+    .page-nav-pill {
+      padding: 0.5rem 1.4rem;
+      border-radius: 50px;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid var(--gray-light);
+      color: var(--gray);
+      transition: var(--transition);
+    }
+
+    .page-nav-pill:hover { border-color: var(--navy); color: var(--navy); }
+    .page-nav-pill.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      cursor: pointer;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .back-to-top:hover { color: var(--red); }
+
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar" id="top">
+  <a href="index.html" class="brand">
+    <img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj logo" class="brand-logo" />
+    <div class="brand-text">
+      <span class="brand-name">Flyraj Tour &amp; Travels</span>
+      <span class="brand-tagline">A sister Concern of SSP Group</span>
+    </div>
+  </a>
+  <nav class="nav" id="mainNav">
+    <a href="umrah-hajj.html">🕋 Umrah / Hajj</a>
+    <a href="visa.html">🛂 Visa</a>
+    <a href="tickets.html">✈ Tickets</a>
+    <a href="tourist-travels.html">🌍 Tourist Travels</a>
+    <a href="about.html">🏢 About</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header" style="background: linear-gradient(135deg, var(--red-dark) 0%, var(--navy-mid) 60%, var(--navy) 100%);">
+  <div class="page-header-inner">
+    <div class="divider-gold">📜</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="subtitle">Please read carefully before using our website or services</p>
+  </div>
+</div>
+
+<!-- PAGE NAV PILLS -->
+<div class="page-nav-pills">
+  <a href="privacy-policy.html" class="page-nav-pill">Privacy Policy</a>
+  <a href="terms.html" class="page-nav-pill active">Terms &amp; Conditions</a>
+</div>
+
+<!-- MAIN WRAPPER -->
+<div class="policy-wrapper">
+
+  <!-- ── Sidebar TOC ── -->
+  <aside class="policy-sidebar reveal">
+    <div class="sidebar-header">
+      <span style="color:var(--gold-light)">📋</span>
+      <h3>Contents</h3>
+    </div>
+    <nav class="toc-list" id="tocList">
+      <a href="#t1"><span class="toc-num">1</span>  Acceptance of Terms</a>
+      <a href="#t2"><span class="toc-num">2</span>  Services Offered</a>
+      <a href="#t3"><span class="toc-num">3</span>  Booking &amp; Payment</a>
+      <a href="#t4"><span class="toc-num">4</span>  Cancellation &amp; Refund</a>
+      <a href="#t5"><span class="toc-num">5</span>  Visa Disclaimer</a>
+      <a href="#t6"><span class="toc-num">6</span>  Travel Documents</a>
+      <a href="#t7"><span class="toc-num">7</span>  Limitation of Liability</a>
+      <a href="#t8"><span class="toc-num">8</span>  User Conduct</a>
+      <a href="#t9"><span class="toc-num">9</span>  Intellectual Property</a>
+      <a href="#t10"><span class="toc-num">10</span> Privacy</a>
+      <a href="#t11"><span class="toc-num">11</span> Governing Law</a>
+      <a href="#t12"><span class="toc-num">12</span> Changes to Terms</a>
+      <a href="#t13"><span class="toc-num">13</span> Contact Information</a>
+    </nav>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main>
+
+    <div class="policy-content reveal">
+
+      <!-- Content Header -->
+      <div class="policy-content-header">
+        <div class="effective">📅 Effective Date: May 12, 2026</div>
+        <h2>Terms &amp; Conditions</h2>
+        <p>Welcome to Flyraj Tours &amp; Travels Ltd. By accessing or using our website and services, you agree to comply with and be bound by the following Terms &amp; Conditions. Please read them carefully before using our services.</p>
+      </div>
+
+      <!-- Notice -->
+      <div class="terms-warning" style="margin:2rem 2.5rem 0;">
+        <span style="font-size:1.2rem; flex-shrink:0;">⚠️</span>
+        <p>If you do not agree with any part of these terms, please do not use our services. By continuing to use our website, you accept these Terms &amp; Conditions in full.</p>
+      </div>
+
+      <!-- Policy Body -->
+      <div class="policy-body">
+
+        <!-- T1 -->
+        <div class="policy-section" id="t1">
+          <div class="policy-section-title">
+            <div class="policy-section-num">1</div>
+            <h3>Acceptance of Terms</h3>
+          </div>
+          <p>By using our website, booking services, or communicating with Flyraj Tours &amp; Travels Ltd., you accept these Terms &amp; Conditions in full. If you do not agree with any part of these terms, please do not use our services.</p>
+        </div>
+
+        <!-- T2 -->
+        <div class="policy-section" id="t2">
+          <div class="policy-section-title">
+            <div class="policy-section-num">2</div>
+            <h3>Services Offered</h3>
+          </div>
+          <p>We provide travel-related services including but not limited to:</p>
+          <ul class="policy-list">
+            <li>Domestic &amp; International Tour Packages</li>
+            <li>Visa Processing Assistance</li>
+            <li>Umrah &amp; Hajj Packages</li>
+            <li>Hotel Reservations</li>
+            <li>Air Ticket Booking</li>
+            <li>Travel Consultancy</li>
+            <li>Transportation Arrangements</li>
+          </ul>
+          <p>All services are subject to availability and applicable laws and regulations.</p>
+        </div>
+
+        <!-- T3 -->
+        <div class="policy-section" id="t3">
+          <div class="policy-section-title">
+            <div class="policy-section-num">3</div>
+            <h3>Booking &amp; Payment Policy</h3>
+          </div>
+          <ul class="policy-list">
+            <li>All bookings are subject to confirmation.</li>
+            <li>Customers must provide accurate personal and travel information.</li>
+            <li>Full or partial payment may be required before confirmation.</li>
+            <li>Prices are subject to change without prior notice due to airline, hotel, currency, or government policy changes.</li>
+            <li>Failure to complete payment within the required time may result in cancellation.</li>
+          </ul>
+        </div>
+
+        <!-- T4 -->
+        <div class="policy-section" id="t4">
+          <div class="policy-section-title">
+            <div class="policy-section-num">4</div>
+            <h3>Cancellation &amp; Refund Policy</h3>
+          </div>
+
+          <div class="policy-sub-title">Customer Cancellation</div>
+          <ul class="policy-list">
+            <li>Cancellation requests must be submitted officially through phone, email, or office communication.</li>
+            <li>Refund eligibility depends on airline, hotel, embassy, transport provider, or package policy.</li>
+            <li>Service charges and processing fees may be non-refundable.</li>
+          </ul>
+
+          <div class="policy-sub-title">Company Cancellation</div>
+          <p>Flyraj Tours &amp; Travels Ltd. reserves the right to cancel or modify any booking, package, or itinerary due to:</p>
+          <ul class="policy-list">
+            <li>Natural disasters</li>
+            <li>Political unrest</li>
+            <li>Weather conditions</li>
+            <li>Airline schedule changes</li>
+            <li>Government restrictions</li>
+            <li>Force majeure events</li>
+          </ul>
+          <p>In such cases, refund policies will depend on third-party provider policies.</p>
+        </div>
+
+        <!-- T5 -->
+        <div class="policy-section" id="t5">
+          <div class="policy-section-title">
+            <div class="policy-section-num">5</div>
+            <h3>Visa &amp; Immigration Disclaimer</h3>
+          </div>
+          <div class="alert alert-warning" style="margin-bottom:1rem;">
+            <span>⚠️</span>
+            <span>Visa approval or rejection is <strong>solely the decision of the respective embassy or immigration authority.</strong> We do not guarantee visa approval under any circumstances.</span>
+          </div>
+          <ul class="policy-list">
+            <li>Customers are responsible for providing genuine and accurate documents.</li>
+            <li>Any losses resulting from false documentation or embassy decisions shall not be the responsibility of Flyraj Tours &amp; Travels Ltd.</li>
+          </ul>
+        </div>
+
+        <!-- T6 -->
+        <div class="policy-section" id="t6">
+          <div class="policy-section-title">
+            <div class="policy-section-num">6</div>
+            <h3>Travel Documents Responsibility</h3>
+          </div>
+          <p>Customers are responsible for ensuring they possess all required travel documents:</p>
+          <ul class="policy-list">
+            <li>Valid Passport</li>
+            <li>Visa</li>
+            <li>Vaccination Certificates (if required)</li>
+            <li>National ID or supporting documents</li>
+            <li>Any other travel permissions required by destination countries</li>
+          </ul>
+        </div>
+
+        <!-- T7 -->
+        <div class="policy-section" id="t7">
+          <div class="policy-section-title">
+            <div class="policy-section-num">7</div>
+            <h3>Limitation of Liability</h3>
+          </div>
+          <p>Flyraj Tours &amp; Travels Ltd. acts as an intermediary between customers and third-party service providers such as airlines, hotels, transport companies, and embassies. We shall not be liable for:</p>
+          <ul class="policy-list">
+            <li>Flight delays or cancellations</li>
+            <li>Hotel issues</li>
+            <li>Lost baggage</li>
+            <li>Personal injury or accidents</li>
+            <li>Immigration denial</li>
+            <li>Third-party service failures</li>
+            <li>Financial losses caused by circumstances beyond our control</li>
+          </ul>
+        </div>
+
+        <!-- T8 -->
+        <div class="policy-section" id="t8">
+          <div class="policy-section-title">
+            <div class="policy-section-num">8</div>
+            <h3>User Conduct</h3>
+          </div>
+          <p>Users agree not to:</p>
+          <ul class="policy-list">
+            <li>Use the website for unlawful activities</li>
+            <li>Submit false information</li>
+            <li>Attempt unauthorized access to systems or data</li>
+            <li>Misuse or copy website content without permission</li>
+          </ul>
+        </div>
+
+        <!-- T9 -->
+        <div class="policy-section" id="t9">
+          <div class="policy-section-title">
+            <div class="policy-section-num">9</div>
+            <h3>Intellectual Property</h3>
+          </div>
+          <p>All website content — including logos, designs, text, graphics, images, and branding materials — is the property of Flyraj Tours &amp; Travels Ltd. and may not be copied or reused without written permission.</p>
+        </div>
+
+        <!-- T10 -->
+        <div class="policy-section" id="t10">
+          <div class="policy-section-title">
+            <div class="policy-section-num">10</div>
+            <h3>Privacy</h3>
+          </div>
+          <p>Use of our website is also governed by our <a href="privacy-policy.html" style="color:var(--red); font-weight:600;">Privacy Policy</a>, which is incorporated into these Terms &amp; Conditions by reference. Please review it carefully.</p>
+        </div>
+
+        <!-- T11 -->
+        <div class="policy-section" id="t11">
+          <div class="policy-section-title">
+            <div class="policy-section-num">11</div>
+            <h3>Governing Law</h3>
+          </div>
+          <p>These Terms &amp; Conditions shall be governed by and interpreted under the laws of Bangladesh. Any disputes arising shall be subject to the jurisdiction of the courts of Bangladesh.</p>
+        </div>
+
+        <!-- T12 -->
+        <div class="policy-section" id="t12">
+          <div class="policy-section-title">
+            <div class="policy-section-num">12</div>
+            <h3>Changes to Terms</h3>
+          </div>
+          <p>Flyraj Tours &amp; Travels Ltd. may update these Terms &amp; Conditions at any time without prior notice. Updated versions will be published on this website. Continued use of our services constitutes acceptance of the updated terms.</p>
+        </div>
+
+        <!-- T13 -->
+        <div class="policy-section" id="t13">
+          <div class="policy-section-title">
+            <div class="policy-section-num">13</div>
+            <h3>Contact Information</h3>
+          </div>
+          <p>For any questions or clarifications about these Terms &amp; Conditions, please contact us:</p>
+          <div class="contact-policy-box">
+            <h4>Flyraj Tours &amp; Travels Ltd.</h4>
+            <div class="cpb-item">
+              <div class="cpb-icon">📍</div>
+              <p><strong>Head Office</strong>House # 22(3rd Floor), Road # 19/A, Block # E, Banani<br>Dhaka-1213, Bangladesh</p>
+            </div>
+            <div class="cpb-item">
+              <div class="cpb-icon">🏢</div>
+              <p><strong>Branch Office</strong>Chapail Road, Opposite Side of Upazila Building, Gopalganj Sadar, Gopalganj</p>
+            </div>
+            <div class="cpb-item">
+              <div class="cpb-icon">📞</div>
+              <p><strong>Phone</strong>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p>
+            </div>
+            <div class="cpb-item">
+              <div class="cpb-icon">✉️</div>
+              <p><strong>Email</strong><a href="mailto:flyrajtourstravelsltd@gmail.com" style="color:var(--gold-light);">flyrajtourstravelsltd@gmail.com<br>absmilon@yahoo.com</a></p>
+            </div>
+          </div>
+
+          <div class="alert alert-info" style="margin-top:1.5rem;">
+            <span>✅</span>
+            <span>By using our website and services, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions.</span>
+          </div>
+        </div>
+
+        <!-- Back to top -->
+        <div style="padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
+          <a href="privacy-policy.html" class="btn btn-secondary" style="font-size:0.72rem;">← Read Privacy Policy</a>
+        </div>
+
+      </div><!-- /.policy-body -->
+    </div><!-- /.policy-content -->
+
+  </main>
+</div><!-- /.policy-wrapper -->
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">FR</div>
+      <h3>Flyraj Tour &amp; Travels Ltd.</h3>
+      <p>Bangladesh's trusted partner for Umrah, Hajj, International Tours &amp; Visa since 2010.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="umrah-hajj.html">Umrah / Hajj</a></li>
+        <li><a href="visa.html">Visa Processing</a></li>
+        <li><a href="tickets.html">Air Tickets</a></li>
+        <li><a href="tourist-travels.html">Tourist Tours</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">📍</div>
+        <p>House # 22(3rd Floor), Road # 19/A, Block # E, Banani<br>Dhaka-1213, Bangladesh</p>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">📞</div>
+        <p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">✉️</div>
+        <p>flyrajtourstravelsltd@gmail.com<br>absmilon@yahoo.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Flyraj Tour &amp; Travels Ltd. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  /* Active TOC highlight on scroll */
+  const sections = document.querySelectorAll('.policy-section[id]');
+  const tocLinks  = document.querySelectorAll('.toc-list a');
+
+  const tocObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => tocObserver.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Flyraj Tour & Travels Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* ─── Policy Layout ─── */
+    .policy-wrapper {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .policy-wrapper { grid-template-columns: 1fr; }
+      .policy-sidebar { display: none; }
+    }
+
+    /* ─── Sidebar TOC ─── */
+    .policy-sidebar {
+      position: sticky;
+      top: 90px;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--gray-light);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .sidebar-header {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .sidebar-header h3 {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .toc-list {
+      padding: 1rem 0;
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--gray);
+      font-family: var(--font-body);
+      transition: all 0.2s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .toc-list a:hover,
+    .toc-list a.active {
+      color: var(--red);
+      background: rgba(192, 21, 42, 0.04);
+      border-left-color: var(--red);
+    }
+
+    .toc-list a .toc-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: var(--gray-light);
+      border-radius: 50%;
+      font-size: 0.65rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      color: var(--navy);
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .toc-list a:hover .toc-num,
+    .toc-list a.active .toc-num {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    /* ─── Policy Content ─── */
+    .policy-content {
+      background: var(--white);
+      border-radius: 14px;
+      border: 1px solid var(--gray-light);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .policy-content-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--red-dark) 100%);
+      padding: 2.5rem 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .policy-content-header::before {
+      content: '🔒';
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 5rem;
+      opacity: 0.1;
+    }
+
+    .policy-content-header .effective {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(201, 168, 76, 0.2);
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      border-radius: 50px;
+      padding: 0.3rem 1rem;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .policy-content-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .policy-content-header p {
+      font-family: var(--font-accent);
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      max-width: 600px;
+    }
+
+    /* ─── Policy Body ─── */
+    .policy-body {
+      padding: 2.5rem;
+    }
+
+    .policy-section {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--gray-light);
+      scroll-margin-top: 100px;
+    }
+
+    .policy-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .policy-section-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .policy-section-num {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--red-dark), var(--red));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(192, 21, 42, 0.3);
+    }
+
+    .policy-section h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .policy-section p {
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-list {
+      margin: 0.8rem 0 1rem 0;
+    }
+
+    .policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .policy-list li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      border-radius: 50%;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    .policy-sub-title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy-light);
+      margin: 1.2rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .policy-sub-title::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ─── Contact Box ─── */
+    .contact-policy-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-policy-box h4 {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .cpb-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .cpb-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(192, 21, 42, 0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .cpb-item p {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .cpb-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+
+    /* ─── Notice Bar ─── */
+    .policy-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 0 2.5rem 0;
+    }
+
+    .policy-notice p {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .policy-notice p strong {
+      color: var(--navy);
+    }
+
+    /* ─── Back to top ─── */
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      cursor: pointer;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .back-to-top:hover { color: var(--red-dark); }
+
+    /* ─── Page nav pills ─── */
+    .page-nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--gray-light);
+      flex-wrap: wrap;
+    }
+
+    .page-nav-pill {
+      padding: 0.5rem 1.4rem;
+      border-radius: 50px;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid var(--gray-light);
+      color: var(--gray);
+      transition: var(--transition);
+    }
+
+    .page-nav-pill:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+
+    .page-nav-pill.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar" id="top">
+  <a href="index.html" class="brand">
+    <img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj logo" class="brand-logo" />
+    <div class="brand-text">
+      <span class="brand-name">Flyraj Tour &amp; Travels</span>
+      <span class="brand-tagline">A sister Concern of SSP Group</span>
+    </div>
+  </a>
+  <nav class="nav" id="mainNav">
+    <a href="umrah-hajj.html">🕋 Umrah / Hajj</a>
+    <a href="visa.html">🛂 Visa</a>
+    <a href="tickets.html">✈ Tickets</a>
+    <a href="tourist-travels.html">🌍 Tourist Travels</a>
+    <a href="about.html">🏢 About</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="divider-gold">🔒</div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">How we collect, use, and protect your personal information</p>
+  </div>
+</div>
+
+<!-- PAGE NAV PILLS -->
+<div class="page-nav-pills">
+  <a href="privacy-policy.html" class="page-nav-pill active">Privacy Policy</a>
+  <a href="terms.html" class="page-nav-pill">Terms &amp; Conditions</a>
+</div>
+
+<!-- MAIN WRAPPER -->
+<div class="policy-wrapper">
+
+  <!-- ── Sidebar TOC ── -->
+  <aside class="policy-sidebar reveal">
+    <div class="sidebar-header">
+      <span style="color:var(--gold-light)">📋</span>
+      <h3>Contents</h3>
+    </div>
+    <nav class="toc-list" id="tocList">
+      <a href="#s1"><span class="toc-num">1</span> Information We Collect</a>
+      <a href="#s2"><span class="toc-num">2</span> How We Use It</a>
+      <a href="#s3"><span class="toc-num">3</span> Sharing of Information</a>
+      <a href="#s4"><span class="toc-num">4</span> Data Security</a>
+      <a href="#s5"><span class="toc-num">5</span> Cookies Policy</a>
+      <a href="#s6"><span class="toc-num">6</span> Third-Party Links</a>
+      <a href="#s7"><span class="toc-num">7</span> Data Retention</a>
+      <a href="#s8"><span class="toc-num">8</span> User Rights</a>
+      <a href="#s9"><span class="toc-num">9</span> Children's Privacy</a>
+      <a href="#s10"><span class="toc-num">10</span> Changes to Policy</a>
+      <a href="#s11"><span class="toc-num">11</span> Contact Information</a>
+    </nav>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main>
+
+    <div class="policy-content reveal">
+      <!-- Content Header -->
+      <div class="policy-content-header">
+        <div class="effective">📅 Effective Date: May 01, 2026</div>
+        <h2>Privacy Policy</h2>
+        <p>Welcome to Flyraj Tours &amp; Travels Ltd. Your privacy is important to us. This Privacy Policy explains how we collect, use, store, and protect your information when you use our website, services, and communication platforms.</p>
+      </div>
+
+      <!-- Notice -->
+      <div class="policy-notice" style="margin:2rem 2.5rem 0;">
+        <span style="font-size:1.2rem; flex-shrink:0;">💡</span>
+        <p>By using our website and services, you agree to the terms outlined in this Privacy Policy. If you have any questions, please <a href="contact.html" style="color:var(--red); font-weight:600;">contact us</a>.</p>
+      </div>
+
+      <!-- Policy Body -->
+      <div class="policy-body">
+
+        <!-- Section 1 -->
+        <div class="policy-section" id="s1">
+          <div class="policy-section-title">
+            <div class="policy-section-num">1</div>
+            <h3>Information We Collect</h3>
+          </div>
+          <p>We may collect the following types of information when you use our services, visit our website, or communicate with our team.</p>
+
+          <div class="policy-sub-title">Personal Information</div>
+          <ul class="policy-list">
+            <li>Full Name</li>
+            <li>Phone Number</li>
+            <li>Email Address</li>
+            <li>Passport Information</li>
+            <li>Travel Preferences</li>
+            <li>Visa &amp; Immigration Documents</li>
+            <li>Billing and Payment Details</li>
+          </ul>
+
+          <div class="policy-sub-title">Non-Personal Information</div>
+          <ul class="policy-list">
+            <li>IP Address</li>
+            <li>Browser Type</li>
+            <li>Device Information</li>
+            <li>Website Usage Data</li>
+            <li>Cookies and Analytics Data</li>
+          </ul>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="policy-section" id="s2">
+          <div class="policy-section-title">
+            <div class="policy-section-num">2</div>
+            <h3>How We Use Your Information</h3>
+          </div>
+          <p>We use your information to deliver and improve our services effectively and securely.</p>
+          <ul class="policy-list">
+            <li>Process tour, visa, Umrah, Hajj, hotel, and flight bookings</li>
+            <li>Provide customer support</li>
+            <li>Communicate regarding packages, offers, and updates</li>
+            <li>Improve our services and website experience</li>
+            <li>Maintain legal and regulatory compliance</li>
+            <li>Prevent fraud and unauthorized activities</li>
+          </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="policy-section" id="s3">
+          <div class="policy-section-title">
+            <div class="policy-section-num">3</div>
+            <h3>Sharing of Information</h3>
+          </div>
+          <p>We may share your information with third-party service providers only as necessary to fulfil your bookings and legal requirements.</p>
+          <ul class="policy-list">
+            <li>Airlines</li>
+            <li>Hotels</li>
+            <li>Visa Processing Authorities</li>
+            <li>Government Agencies</li>
+            <li>Payment Service Providers</li>
+            <li>Travel Insurance Providers</li>
+          </ul>
+          <div class="alert alert-info" style="margin-top:1rem;">
+            <span>🔐</span>
+            <span>We do <strong>not</strong> sell or rent your personal information to third parties.</span>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="policy-section" id="s4">
+          <div class="policy-section-title">
+            <div class="policy-section-num">4</div>
+            <h3>Data Security</h3>
+          </div>
+          <p>We implement reasonable security measures to protect your personal information from unauthorized access, misuse, alteration, or disclosure. However, no online platform can guarantee 100% security.</p>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="policy-section" id="s5">
+          <div class="policy-section-title">
+            <div class="policy-section-num">5</div>
+            <h3>Cookies Policy</h3>
+          </div>
+          <p>Our website may use cookies to enhance your browsing experience.</p>
+          <ul class="policy-list">
+            <li>Improve website performance</li>
+            <li>Remember user preferences</li>
+            <li>Analyze website traffic</li>
+            <li>Enhance user experience</li>
+          </ul>
+          <p>Users may disable cookies through browser settings if preferred.</p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="policy-section" id="s6">
+          <div class="policy-section-title">
+            <div class="policy-section-num">6</div>
+            <h3>Third-Party Links</h3>
+          </div>
+          <p>Our website may contain links to external websites. We are not responsible for the privacy practices or content of third-party websites. We encourage you to review the privacy policies of any external sites you visit.</p>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="policy-section" id="s7">
+          <div class="policy-section-title">
+            <div class="policy-section-num">7</div>
+            <h3>Data Retention</h3>
+          </div>
+          <p>We retain customer information only for as long as necessary to:</p>
+          <ul class="policy-list">
+            <li>Provide services</li>
+            <li>Meet legal obligations</li>
+            <li>Resolve disputes</li>
+            <li>Maintain business records</li>
+          </ul>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="policy-section" id="s8">
+          <div class="policy-section-title">
+            <div class="policy-section-num">8</div>
+            <h3>User Rights</h3>
+          </div>
+          <p>You have the following rights regarding your personal data. Requests can be made through our official contact channels.</p>
+          <ul class="policy-list">
+            <li>Access your personal information</li>
+            <li>Correct inaccurate information</li>
+            <li>Delete your personal data (subject to legal requirements)</li>
+            <li>Withdraw marketing communication consent</li>
+          </ul>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="policy-section" id="s9">
+          <div class="policy-section-title">
+            <div class="policy-section-num">9</div>
+            <h3>Children's Privacy</h3>
+          </div>
+          <p>Our services are not directed toward children under 18 years of age. We do not knowingly collect information from minors without guardian consent.</p>
+        </div>
+
+        <!-- Section 10 -->
+        <div class="policy-section" id="s10">
+          <div class="policy-section-title">
+            <div class="policy-section-num">10</div>
+            <h3>Changes to This Policy</h3>
+          </div>
+          <p>Flyraj Tours &amp; Travels Ltd. reserves the right to update or modify this Privacy Policy at any time. Changes will be posted on this page with an updated effective date. We encourage you to review this page periodically.</p>
+        </div>
+
+        <!-- Section 11 — Contact -->
+        <div class="policy-section" id="s11">
+          <div class="policy-section-title">
+            <div class="policy-section-num">11</div>
+            <h3>Contact Information</h3>
+          </div>
+          <p>If you have questions or concerns about this Privacy Policy, please reach out to us:</p>
+          <div class="contact-policy-box">
+            <h4>Flyraj Tours &amp; Travels Ltd.</h4>
+            <div class="cpb-item">
+              <div class="cpb-icon">📍</div>
+              <p><strong>Head Office</strong>House # 22(3rd Floor), Road # 19/A, Block # E, Banani<br>Dhaka-1213, Bangladesh</p>
+            </div>
+            <div class="cpb-item">
+              <div class="cpb-icon">🏢</div>
+              <p><strong>Branch Office</strong>Chapail Road, Opposite Side of Upazila Building, Gopalganj Sadar, Gopalganj</p>
+            </div>
+            <div class="cpb-item">
+              <div class="cpb-icon">📞</div>
+              <p><strong>Phone</strong>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p>
+            </div>
+            <div class="cpb-item">
+              <div class="cpb-icon">✉️</div>
+              <p><strong>Email</strong><a href="mailto:flyrajtourstravelsltd@gmail.com" style="color:var(--gold-light);">flyrajtourstravelsltd@gmail.com<br>absmilon@yahoo.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to top -->
+        <div style="padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
+          <a href="terms.html" class="btn btn-primary" style="font-size:0.72rem;">Read Terms &amp; Conditions →</a>
+        </div>
+
+      </div><!-- /.policy-body -->
+    </div><!-- /.policy-content -->
+
+  </main>
+</div><!-- /.policy-wrapper -->
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">FR</div>
+      <h3>Flyraj Tour &amp; Travels Ltd.</h3>
+      <p>Bangladesh's trusted partner for Umrah, Hajj, International Tours &amp; Visa since 2010.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="umrah-hajj.html">Umrah / Hajj</a></li>
+        <li><a href="visa.html">Visa Processing</a></li>
+        <li><a href="tickets.html">Air Tickets</a></li>
+        <li><a href="tourist-travels.html">Tourist Tours</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">📍</div>
+        <p>House # 22(3rd Floor), Road # 19/A, Block # E, Banani<br>Dhaka-1213, Bangladesh</p>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">📞</div>
+        <p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">✉️</div>
+        <p>flyrajtourstravelsltd@gmail.com<br>absmilon@yahoo.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Flyraj Tour &amp; Travels Ltd. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  /* Active TOC highlight on scroll */
+  const sections = document.querySelectorAll('.policy-section[id]');
+  const tocLinks  = document.querySelectorAll('.toc-list a');
+
+  const tocObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => tocObserver.observe(s));
+</script>
+</body>
+</html>

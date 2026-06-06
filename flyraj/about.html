@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Flyraj Tour & Travels Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+    .team-card { background: var(--white); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--red); }
+    .team-avatar { width: 80px; height: 80px; background: linear-gradient(135deg, var(--navy), var(--red)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.8rem; font-weight: 900; color: var(--white); margin: 0 auto 1rem; overflow: hidden; }
+    .team-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .team-card h3 { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+    .team-card .role { font-size: 0.8rem; color: var(--red); font-weight: 600; font-family: var(--font-display); letter-spacing: 0.06em; text-transform: uppercase; }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.2rem; }
+    .cert-box { background: var(--white); border-radius: 10px; padding: 1.5rem; text-align: center; border: 2px solid var(--gold); }
+    .cert-box .cert-icon { font-size: 2rem; margin-bottom: 0.6rem; display: block; }
+    .cert-box h4 { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; }
+    .cert-box p { font-size: 0.78rem; color: var(--gray); margin-top: 0.3rem; }
+    .page-header { background-image: url('Images/about.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+    .page-header-inner { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a href="index.html" class="brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="brand-logo" /><div class="brand-text"><span class="brand-name">Flyraj Tour & Travels</span><span class="brand-tagline">A sister Concern of SSP Group</span></div></a>
+  <nav class="nav" id="mainNav">
+    <a href="umrah-hajj.html">🕋 Umrah / Hajj</a>
+    <a href="visa.html">🛂 Visa</a>
+    <a href="tickets.html">✈ Tickets</a>
+    <a href="tourist-travels.html">🌍 Tourist Travels</a>
+    <a href="about.html" class="active">🏢 About</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="divider-gold">🏢</div>
+    <h1>About Flyraj</h1>
+    <p class="subtitle">Over 14 years of trusted travel service across Bangladesh</p>
+  </div>
+</div>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="two-col reveal">
+      <div>
+        <h2 class="section-title" style="text-align:left; margin-bottom:1rem;">Our Story</h2>
+        <div class="gold-rule" style="justify-content:flex-start; margin-bottom:1.5rem;"><span>✦</span></div>
+        <p style="margin-bottom:1rem; color:var(--gray); line-height:1.8;">Flyraj Tour &amp; Travels Ltd. was founded in 2010 with a singular mission: to make world-class travel accessible, affordable, and spiritually meaningful for the people of Bangladesh.</p>
+        <p style="margin-bottom:1rem; color:var(--gray); line-height:1.8;">What began as a small Umrah facilitation service in Dhaka has grown into one of Bangladesh's most respected travel agencies — offering Umrah &amp; Hajj pilgrimages, international tours, visa processing, and airline ticket services.</p>
+        <p style="color:var(--gray); line-height:1.8;">We are proud to be ATAB (Association of Travel Agents of Bangladesh) registered and fully government-licensed, trusted by over 15,000 travellers and pilgrims.</p>
+      </div>
+      <div>
+        <img src="Images/team.jpg.jpeg" alt="Our Story" style="border-radius:14px; box-shadow:var(--shadow-lg); width:100%;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="features-grid reveal">
+      <div class="feature-box"><div class="feature-icon">🏆</div><h3>Founded 2010</h3><p>Over 14 years of expertise in travel, pilgrimage, and visa services.</p></div>
+      <div class="feature-box"><div class="feature-icon">👥</div><h3>15,000+ Clients</h3><p>Thousands of satisfied customers from across Bangladesh trust us.</p></div>
+      <div class="feature-box"><div class="feature-icon">🛡️</div><h3>ATAB Registered</h3><p>Fully certified, government-approved travel agency. Safe and legal.</p></div>
+      <div class="feature-box"><div class="feature-icon">🌐</div><h3>40+ Destinations</h3><p>We arrange travel to over 40 countries worldwide for our clients.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="team">
+  <div class="container">
+    <h2 class="section-title reveal">Our Team</h2>
+    <p class="section-subtitle reveal">Dedicated professionals committed to your journey</p>
+    <div class="gold-rule reveal"><span>✦</span></div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="team-avatar"><img src="Images/Chairman.jpeg" alt="Picture of Chairman"></div><h3>SK. Shahriar Panna</h3><div class="role">Chairman</div></div>
+      <div class="team-card reveal"><div class="team-avatar">MK</div><h3>Md. Karim Hossain</h3><div class="role">Managing Director</div></div>
+      <div class="team-card reveal"><div class="team-avatar">SA</div><h3>Sharmin Akter</h3><div class="role">Head of Operations</div></div>
+      <div class="team-card reveal"><div class="team-avatar">RH</div><h3>Rafiqul Hasan</h3><div class="role">Umrah & Hajj Specialist</div></div>
+      <div class="team-card reveal"><div class="team-avatar">NB</div><h3>Nazmul Bari</h3><div class="role">Visa Processing Head</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">Our Certifications</h2>
+    <div class="gold-rule reveal"><span>✦</span></div>
+    <div class="cert-grid reveal">
+      <div class="cert-box"><span class="cert-icon">🛡️</span><h4>ATAB Member</h4><p>Association of Travel Agents of Bangladesh</p></div>
+      <div class="cert-box"><span class="cert-icon">✈️</span><h4>IATA Accredited</h4><p>International Air Transport Association</p></div>
+      <div class="cert-box"><span class="cert-icon">🕋</span><h4>Hajj License</h4><p>Bangladesh Hajj Management Authority</p></div>
+      <div class="cert-box"><span class="cert-icon">🏛️</span><h4>Gov. Registered</h4><p>Ministry of Civil Aviation &amp; Tourism</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="footer-brand-logo" /><h3>Flyraj Tour & Travels Ltd.</h3><p>Bangladesh's trusted partner for Umrah, Hajj, International Tours &amp; Visa since 2010.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="umrah-hajj.html">Umrah / Hajj</a></li><li><a href="visa.html">Visa Processing</a></li><li><a href="tickets.html">Air Tickets</a></li><li><a href="tourist-travels.html">Tourist Tours</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Flyraj Tour & Travels Ltd. All Rights Reserved.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

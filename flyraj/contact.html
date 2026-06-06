@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Flyraj Tour & Travels Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info-box { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); border-radius: 14px; padding: 2.5rem; color: var(--white); }
+    .contact-info-box h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem; }
+    .contact-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+    .contact-icon-box { width: 44px; height: 44px; background: rgba(192,21,42,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; border: 1px solid rgba(192,21,42,0.4); }
+    .contact-item-text strong { display: block; font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.2rem; }
+    .contact-item-text p { font-size: 0.9rem; color: rgba(255,255,255,0.72); line-height: 1.5; }
+    .form-card { background: var(--white); border-radius: 14px; padding: 2.5rem; box-shadow: var(--shadow-md); border: 1px solid var(--gray-light); }
+    .form-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--gray-light); }
+    .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+    .social-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 6px; font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(255,255,255,0.08); color: var(--white); border: 1px solid rgba(255,255,255,0.15); transition: var(--transition); }
+    .social-btn:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .hours-table { width: 100%; margin-top: 1.5rem; }
+    .hours-table tr td { padding: 0.5rem 0; font-size: 0.88rem; border-bottom: 1px dashed rgba(255,255,255,0.1); }
+    .hours-table tr td:first-child { color: rgba(255,255,255,0.55); }
+    .hours-table tr td:last-child { color: var(--gold-light); text-align: right; font-weight: 600; }
+    .page-header { background-image: url('Images/contact.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+    .page-header-inner { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <a href="index.html" class="brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="brand-logo" /><div class="brand-text"><span class="brand-name">Flyraj Tour & Travels</span><span class="brand-tagline">A sister Concern of SSP Group</span></div></a>
+  <nav class="nav" id="mainNav">
+    <a href="umrah-hajj.html">🕋 Umrah / Hajj</a>
+    <a href="visa.html">🛂 Visa</a>
+    <a href="tickets.html">✈ Tickets</a>
+    <a href="tourist-travels.html">🌍 Tourist Travels</a>
+    <a href="about.html">🏢 About</a>
+    <a href="contact.html" class="active">📞 Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="divider-gold">📞</div>
+    <h1>Contact Us</h1>
+    <p class="subtitle">We're here to help — reach out anytime for inquiries, bookings or consultations</p>
+  </div>
+</div>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info-box reveal">
+        <h3>Get In Touch</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon-box">📍</div>
+          <div class="contact-item-text">
+            <strong>Office Address</strong>
+            <p>House # 22(3rd Floor), Road # 19/A, Block # E, Banani<br>Dhaka-1213, Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-box">📞</div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            <p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-box">✉️</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <p>flyrajtourstravelsltd@gmail.com<br>absmilon@yahoo.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon-box">💬</div>
+          <div class="contact-item-text">
+            <strong>WhatsApp</strong>
+            <p>+880 1XXX-XXXXXX<br>Available 8am – 10pm daily</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:2rem;">Office Hours</h3>
+        <table class="hours-table">
+          <tr><td>Saturday – Thursday</td><td>10:00 AM – 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>Off day</td></tr>
+          <tr><td>Public Holidays</td><td>By Appointment</td></tr>
+        </table>
+
+        <div class="social-links">
+          <a href="#" class="social-btn">📘 Facebook</a>
+          <a href="#" class="social-btn">📷 Instagram</a>
+          <a href="#" class="social-btn">▶️ YouTube</a>
+          <a href="#" class="social-btn">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="service">Interested Service</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>Umrah Package</option>
+              <option>Hajj Package</option>
+              <option>Visa Processing</option>
+              <option>Air Ticket</option>
+              <option>Tourist Tour Package</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your travel plans, dates, number of people…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="Images/flyraj tours travels ltd logo.jpg.jpeg" alt="Flyraj Logo" class="footer-brand-logo" /><h3>Flyraj Tour & Travels Ltd.</h3><p>Bangladesh's trusted partner for Umrah, Hajj, International Tours &amp; Visa since 2010.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="umrah-hajj.html">Umrah / Hajj</a></li><li><a href="visa.html">Visa Processing</a></li><li><a href="tickets.html">Air Tickets</a></li><li><a href="tourist-travels.html">Tourist Tours</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="footer-contact-icon">📞</div><p>+880 1729 247364 (Mobile)<br>+880 2-48811691 (Cell)</p></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Flyraj Tour & Travels Ltd. All Rights Reserved.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
